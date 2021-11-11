@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="BaseScreen" id="BYZ-38-t0r" customClass="BaseScreen" customModule="delegate_pattern_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="yTB-ts-BFf">
+                                <rect key="frame" x="48.5" y="164.5" width="317" height="567.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your favorite LDR album!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz2-yF-Jcw">
+                                        <rect key="frame" x="0.0" y="0.0" width="317" height="81.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wyc-dW-a3I">
+                                        <rect key="frame" x="9" y="150.5" width="299" height="299"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="299" id="Hyj-My-jVD"/>
+                                            <constraint firstAttribute="height" constant="299" id="dGZ-jr-RCl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEc-bG-Lnk">
+                                        <rect key="frame" x="94.5" y="518.5" width="128" height="49"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Choose">
+                                                    <attributes>
+                                                        <font key="NSFont" size="30" name="SFPro-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mZ3-Sa-QkB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wyc-dW-a3I" secondAttribute="trailing" constant="9" id="0Bg-7r-bMH"/>
+                                    <constraint firstAttribute="trailing" secondItem="FEc-bG-Lnk" secondAttribute="trailing" constant="94.5" id="43V-Pq-1Ln"/>
+                                    <constraint firstItem="wyc-dW-a3I" firstAttribute="leading" secondItem="yTB-ts-BFf" secondAttribute="leading" constant="9" id="5vu-bn-9qK"/>
+                                    <constraint firstItem="FEc-bG-Lnk" firstAttribute="top" secondItem="wyc-dW-a3I" secondAttribute="bottom" constant="69" id="Mnm-py-hh5"/>
+                                    <constraint firstItem="wyc-dW-a3I" firstAttribute="top" secondItem="Qz2-yF-Jcw" secondAttribute="bottom" constant="69" id="NcB-WG-dXI"/>
+                                    <constraint firstItem="Qz2-yF-Jcw" firstAttribute="top" secondItem="yTB-ts-BFf" secondAttribute="top" id="O5h-Fz-Y2i"/>
+                                    <constraint firstItem="FEc-bG-Lnk" firstAttribute="leading" secondItem="yTB-ts-BFf" secondAttribute="leading" constant="94.5" id="S5e-KL-Lyh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qz2-yF-Jcw" secondAttribute="trailing" id="cDt-aa-p7V"/>
+                                    <constraint firstItem="FEc-bG-Lnk" firstAttribute="top" secondItem="wyc-dW-a3I" secondAttribute="bottom" constant="69" id="g3E-n9-88D"/>
+                                    <constraint firstItem="wyc-dW-a3I" firstAttribute="top" secondItem="Qz2-yF-Jcw" secondAttribute="bottom" constant="69" id="naH-Kf-2Id"/>
+                                    <constraint firstItem="Qz2-yF-Jcw" firstAttribute="leading" secondItem="yTB-ts-BFf" secondAttribute="leading" id="sVF-5F-PnB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yTB-ts-BFf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ATs-kZ-MZY"/>
+                            <constraint firstItem="yTB-ts-BFf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SrR-tf-7f9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="FEc-bG-Lnk" id="WOj-4z-rX8"/>
+                        <outlet property="mainImageView" destination="wyc-dW-a3I" id="IFe-lM-7tp"/>
+                        <outlet property="nameLabel" destination="Qz2-yF-Jcw" id="qSV-NJ-k8H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
+        </scene>
+        <!--SelectionScreen-->
+        <scene sceneID="xwD-dH-4kY">
+            <objects>
+                <viewController storyboardIdentifier="SelectionScreen" title="SelectionScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2CG-HP-ZzJ" customClass="SelectionScreen" customModule="delegate_pattern_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H6m-WB-D5u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qzR-WB-eEZ">
+                                <rect key="frame" x="82" y="228" width="250" height="540"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rix-dJ-8OT">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="BVN-EO-vyd"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="oHD-nC-pad"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="ultraviolence"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="blueBanistersTapped:" destination="2CG-HP-ZzJ" eventType="touchUpInside" id="4Ax-yR-mBT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDe-BT-RLZ">
+                                        <rect key="frame" x="0.0" y="290" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="3pg-QA-7dw"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="ZJC-Np-cu9"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="borntodie"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="bornToDieTapped:" destination="2CG-HP-ZzJ" eventType="touchUpInside" id="DZA-KI-UGI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your favorite LDR album:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-7S-Yzp">
+                                <rect key="frame" x="20" y="104" width="374" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nt4-5q-pUc"/>
+                        <color key="backgroundColor" red="0.96078431610000004" green="0.95686274770000002" blue="0.93725490570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6o4-7S-Yzp" firstAttribute="top" secondItem="nt4-5q-pUc" secondAttribute="top" constant="60" id="fYc-dx-Seh"/>
+                            <constraint firstItem="qzR-WB-eEZ" firstAttribute="centerX" secondItem="H6m-WB-D5u" secondAttribute="centerX" id="g3f-aT-JGn"/>
+                            <constraint firstItem="6o4-7S-Yzp" firstAttribute="leading" secondItem="nt4-5q-pUc" secondAttribute="leading" constant="20" id="kOz-AF-gDk"/>
+                            <constraint firstItem="qzR-WB-eEZ" firstAttribute="centerY" secondItem="H6m-WB-D5u" secondAttribute="centerY" constant="50" id="kgK-lU-4gl"/>
+                            <constraint firstItem="nt4-5q-pUc" firstAttribute="trailing" secondItem="6o4-7S-Yzp" secondAttribute="trailing" constant="20" id="siX-TY-cpY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1o-2f-O4z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="borntodie" width="1500" height="1500"/>
+        <image name="ultraviolence" width="1000" height="1000"/>
+    </resources>
+</document>
