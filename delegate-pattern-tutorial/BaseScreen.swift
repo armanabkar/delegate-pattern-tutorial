@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseScreen: UIViewController {
+class BaseScreen: UIViewController, AlbumSelectionDelegate {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var mainImageView: UIImageView!
@@ -22,10 +22,6 @@ class BaseScreen: UIViewController {
         selectionVC.albumSelectionDelegate = self
         present(selectionVC, animated: true, completion: nil)
     }
-    
-}
-
-extension BaseScreen: AlbumSelectionDelegate {
     
     func didTapChoice(image: UIImage, name: String) {
         mainImageView.image = image
